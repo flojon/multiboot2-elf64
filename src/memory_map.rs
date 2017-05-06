@@ -30,6 +30,9 @@ pub struct MemoryArea {
     _reserved: u32,
 }
 
+unsafe impl Send for MemoryArea {}
+unsafe impl Sync for MemoryArea {}
+
 impl MemoryArea {
     pub fn start_address(&self) -> usize {
         self.base_addr as usize
