@@ -21,7 +21,7 @@ impl MemoryMapTag {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 #[repr(C)]
 pub struct MemoryArea {
     base_addr: u64,
